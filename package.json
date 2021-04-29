@@ -4,8 +4,8 @@
   "description": "circle ci learning ",
   "main": "index.js",
   "scripts": {
-    "test:junit": "cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=results/results.xml'",
-    "test:multiple": "cypress run --browser chrome --reporter mocha-multi-reporters --reporter-options configFile=config.json"
+    "test:junit": "cypress run --reporter junit --reporter-options 'mochaFile=results/results.xml'",
+    "test:multiple": "cypress run --reporter mocha-multi-reporters --reporter-options configFile=config.json"
   },
   "repository": {
     "type": "git",
