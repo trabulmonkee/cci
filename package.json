@@ -10,8 +10,8 @@
     "precy:run": "npm run clean:cy:artifacts",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "report:merge": "mochawesome-merge cypress/results/json/*.json > cypress/results/mochawesome-bundle.json",
-    "report:generate": "marge cypress/results/mochawesome-bundle.json -o cypress/reports/html",
+    "report:merge": "mochawesome-merge cypress/results/json/*.json > cypress/results/test-results.json",
+    "report:generate": "marge cypress/results/test-results.json -o cypress/reports/html",
     "postcy:run": "npm run report:merge && npm run report:generate",
     "cy:test": "npm run cy:run || npm run postcy:run"
   },
