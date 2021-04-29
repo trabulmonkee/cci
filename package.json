@@ -1,0 +1,26 @@
+{
+  "name": "cci",
+  "version": "1.0.0",
+  "description": "circle ci learning ",
+  "main": "index.js",
+  "scripts": {
+    "test:junit": "cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=results/results.xml'",
+    "test:multiple": "cypress run --browser chrome --reporter mocha-multi-reporters --reporter-options configFile=config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trabulmonkee/cci.git"
+  },
+  "author": "Mike Millgate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trabulmonkee/cci/issues"
+  },
+  "homepage": "https://github.com/trabulmonkee/cci#readme",
+  "devDependencies": {
+    "cypress": "^7.2.0",
+    "mocha": "^8.3.2",
+    "mocha-junit-reporter": "^2.0.0",
+    "mocha-multi-reporters": "^1.5.1"
+  }
+}
