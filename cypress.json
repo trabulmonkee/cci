@@ -1,1 +1,8 @@
-{}
+{
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "cy-reporter-config.json"
+  },
+  "videosFolder": "cypress/reports/videos",
+  "screenshotsFolder": "cypress/reports/screenshots"
+}

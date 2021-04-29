@@ -24,11 +24,6 @@ jobs:
             - ~/.cache
       - run:
           name: Running E2E tests
-          command: npm run test:multiple
+          command: npm run cy:test
       - store_test_results:
-          path: results
-      - store_artifacts:
-          path: cypress/videos
-      - store_artifacts:
-          path: cypress/screenshots
-        
+          path: cypress/reports        

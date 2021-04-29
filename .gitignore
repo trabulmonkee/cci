@@ -1,4 +1,9 @@
 node_modules
+*.log
 cypress/screenshots
 cypress/videos
-results
+cypress/logs
+cypress/reports
+cypress/results
+.history
+.vscode
