@@ -10,9 +10,10 @@
     "precy:run": "npm run clean:cy:artifacts",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "report:merge": "mochawesome-merge cypress/results/json/*.json > cypress/results/test-results.json",
+    "report:json:merge": "mochawesome-merge cypress/results/json/*.json > cypress/results/test-results.json",
+    "report:xml:merge": "jrm cypress/results/test-results.xml 'cypress/results/xml/*.xml'",
     "report:generate": "marge cypress/results/test-results.json -o cypress/reports/html",
-    "postcy:run": "npm run report:merge && npm run report:generate",
+    "postcy:run": "npm run report:json:merge && npm run report:xml:merge && npm run report:generate",
     "cy:test": "npm run cy:run || npm run postcy:run"
   },
   "repository": {
@@ -28,6 +29,8 @@
   "devDependencies": {
     "cypress": "^7.2.0",
     "cypress-multi-reporters": "^1.5.0",
+    "junit-report-merger": "^2.2.2",
+    "mocha-junit-reporter": "^2.0.0",
     "mochawesome": "^6.2.2",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.2.0"

@@ -25,5 +25,7 @@ jobs:
       - run:
           name: Running E2E tests
           command: npm run cy:test
+      - store_test_results:
+          path: cypress/results/test-results.xml
       - store_artifacts:
           path: cypress/reports        

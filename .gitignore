@@ -7,3 +7,4 @@ cypress/reports
 cypress/results
 .history
 .vscode
+.DS_Store
